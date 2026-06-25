@@ -1,0 +1,87 @@
+import {
+  Callout,
+  GuideLayout,
+  GuideStep,
+  GuideStepList,
+  LinkButton,
+  MediaFigure,
+  ToolList,
+} from "@openpawlabs/diy-guides-ui";
+
+<GuideLayout>
+
+  <GuideLayout.Header
+    title="How to make your own DIY Guides!"
+    difficulty="easy"
+    timeEstimate="30 minutes"
+    meta="Draft"
+  />
+
+  <GuideLayout.Intro>
+    Host your own DIY Guides in a very simple manner! Follow the steps to get a DIY guide on your existing website without any coding knowledge required!
+  </GuideLayout.Intro>
+
+  <GuideLayout.Sidebar>
+    <ToolList title="Tools">
+      <ToolList.Item name="Code Editor" quantity={1} />
+      <ToolList.Item name="DIY Guide Authoring Tool" quantity={1} href="https://openpawlabs.github.io/diy-guides-authoring-tool/" />
+    </ToolList>
+  </GuideLayout.Sidebar>
+
+  <GuideLayout.Content>
+    <GuideStepList>
+      <GuideStep title="Add DIY Guide Script to your HTML Page">
+        <GuideStep.Media>
+          <MediaFigure src="./images/placeholder.svg" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            Open your existing HTML file in your code editor
+          </GuideStep.Bullet>
+          <GuideStep.Bullet>
+            Add the DIY Guides script tag to the bottom of your HTML file to start loading the library.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            The DIY Guides script is hosted by GitHub Pages so that you don't have to compile anything to use it!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            If you want a simpler way to get started you can download this repository as a zip file and create a new GitHub repository with all of the downloaded files to contain your new DIY Guide! When you commit changes to your Guide to GitHub it will automatically be published to GitHub Pages to allow super simple guide creation!
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Write your guide">
+        <GuideStep.Media />
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="YELLOW">
+            Create an empty folder in your web project to contain your guide, or add it to a GitHub repo for automatic publishing to GitHub pages!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Use the DIY Guide Authoring tool to write and manage your guide, once you are done save your changes and push it to your GitHub repository.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Add the guide to your webpage">
+        <GuideStep.Media />
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            Add the diy guide html tag to load your DIY Guide and display it where you would like on your webpage!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet>
+            ```html
+            <diy-guide src="./guide/guide.mdx"></diy-guide>
+            ```
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Done!">
+        <GuideStep.Media />
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            Simple as that! Your guide should now automatically be displayed on your website!
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+    </GuideStepList>
+  </GuideLayout.Content>
+
+</GuideLayout>

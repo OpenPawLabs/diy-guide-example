@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An example DIY guide embedded in a plain HTML page with the OpenPawLabs guide embedder."
+    />
+    <title>DIY Guide Example</title>
+  </head>
+  <body>
+    <!-- Your guide renders right here, fetched from ./guide/guide.mdx. -->
+    <diy-guide src="./guide/guide.mdx"></diy-guide>
+
+    <!-- One script tag, hosted on GitHub Pages — nothing to build or install. -->
+    <script
+      src="https://openpawlabs.github.io/diy-guide-embedder/embed.js"
+      defer
+    ></script>
+  </body>
+</html>
